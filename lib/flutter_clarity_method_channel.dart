@@ -11,12 +11,12 @@ class MethodChannelFlutterClarity extends FlutterClarityPlatform {
 
   @override
   Future<void> initialize({
-    required String projectId,
-    String? userId,
-    String? logLevel = "None",
-    bool? allowMeteredNetworkUsage = false,
-    bool? enableWebViewCapture = true,
-    List<String>? allowedDomains,
+    @required String projectId,
+    String userId,
+    String logLevel = "None",
+    bool allowMeteredNetworkUsage = false,
+    bool enableWebViewCapture = true,
+    List<String> allowedDomains,
   }) async {
     await methodChannel.invokeMethod<void>('initialize', {
       'projectId': projectId,
@@ -36,8 +36,8 @@ class MethodChannelFlutterClarity extends FlutterClarityPlatform {
   }
 
   @override
-  Future<String?> getCurrentSessionId() async {
-    String? sessionId =
+  Future<String> getCurrentSessionId() async {
+    String sessionId =
         await methodChannel.invokeMethod<String>('getCurrentSessionId');
     return sessionId;
   }

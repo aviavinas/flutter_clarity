@@ -24,12 +24,12 @@ abstract class FlutterClarityPlatform extends PlatformInterface {
   }
 
   Future<void> initialize({
-    required String projectId,
-    String? userId,
-    String? logLevel = "None",
-    bool? allowMeteredNetworkUsage = false,
-    bool? enableWebViewCapture = true,
-    List<String>? allowedDomains,
+    @required String projectId,
+    String userId,
+    String logLevel = "None",
+    bool allowMeteredNetworkUsage = false,
+    bool enableWebViewCapture = true,
+    List<String> allowedDomains,
   }) {
     throw UnimplementedError('initialize() has not been implemented.');
   }
@@ -38,7 +38,7 @@ abstract class FlutterClarityPlatform extends PlatformInterface {
     throw UnimplementedError('setCustomUserId() has not been implemented.');
   }
 
-  Future<String?> getCurrentSessionId() {
+  Future<String> getCurrentSessionId() {
     throw UnimplementedError('getCurrentSessionId() has not been implemented.');
   }
 }

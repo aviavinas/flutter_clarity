@@ -29,12 +29,12 @@ class FlutterClarityPlugin {
   /// @param allowedDomains    The whitelisted domains to allow Clarity to capture their DOM content.
   ///                          If it contains "*" as an element, all domains will be captured.
   Future<void> initialize({
-    required String projectId,
-    String? userId,
-    String? logLevel = "None",
-    bool? allowMeteredNetworkUsage = false,
-    bool? enableWebViewCapture = true,
-    List<String>? allowedDomains = const ["*"],
+    @required String projectId,
+    String userId,
+    String logLevel = "None",
+    bool allowMeteredNetworkUsage = false,
+    bool enableWebViewCapture = true,
+    List<String> allowedDomains = const ["*"],
   }) async {
     if (!Platform.isAndroid) {
       // print("Clarity supports Android only for now.");
@@ -71,7 +71,7 @@ class FlutterClarityPlugin {
   /// Returns the active session id. This can be used to correlate the Clarity session with other
   /// analytics tools that the developer may be using.
   /// @returns a promise that resolves to the current session id.
-  Future<String?> getCurrentSessionId() async {
+  Future<String> getCurrentSessionId() async {
     if (!Platform.isAndroid) {
       // print("Clarity supports Android only for now.");
       return Future(() => "");
