@@ -11,7 +11,7 @@ class MethodChannelFlutterClarity extends FlutterClarityPlatform {
 
   @override
   Future<void> initialize({
-    @required String projectId,
+    String projectId,
     String userId,
     String logLevel = "None",
     bool allowMeteredNetworkUsage = false,

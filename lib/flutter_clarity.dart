@@ -29,7 +29,7 @@ class FlutterClarityPlugin {
   /// @param allowedDomains    The whitelisted domains to allow Clarity to capture their DOM content.
   ///                          If it contains "*" as an element, all domains will be captured.
   Future<void> initialize({
-    @required String projectId,
+    String projectId,
     String userId,
     String logLevel = "None",
     bool allowMeteredNetworkUsage = false,
